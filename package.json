@@ -33,6 +33,7 @@
     "joi": "^17.6.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.5.4",
+    "mongoose-sequence": "^5.3.1",
     "morgan": "^1.10.0",
     "uuid": "^8.3.2"
   },
@@ -40,3 +41,5 @@
     "nodemon": "^2.0.19"
   }
 }
+
+

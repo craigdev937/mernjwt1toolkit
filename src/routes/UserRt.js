@@ -1,8 +1,11 @@
 import express from "express";
-import { UserIndex } from "../controllers/UserCon.js";
+import { USER } from "../controllers/UserCon.js";
 
 export const UserRt = express.Router();
-    UserRt.get("/", UserIndex);
+    UserRt.post("/", USER.Create);
+    UserRt.get("/", USER.GetAll);
+    UserRt.put("/", USER.Update);
+    UserRt.delete("/", USER.Delete);
 
 
 

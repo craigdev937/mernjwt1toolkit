@@ -2,11 +2,15 @@ import "dotenv/config";
 import express from "express";
 import logger from "morgan";
 import cookieParser from "cookie-parser";
+import mongoose from "mongoose";
 import { errorHandler } from "./middleware/errorHandler.js";
 import { UserRt } from "./routes/UserRt.js";
 import helmet from "helmet";
 
 (async () => {
+    await mongoose.connect(process.env.MONGO_URI)
+    .then(() => console.log("MongoDB is now Connected!"))
+    .catch((error) => console.log(error));
     const app = express();
     app.use(helmet());
 

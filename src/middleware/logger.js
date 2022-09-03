@@ -3,6 +3,9 @@ import fs from "fs";
 const fsPromises = fs.promises;
 import { format } from "date-fns";
 import { v4 as uuidv4 } from "uuid";
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 class LoggerClass {
     logEvents = async (message, logFileName) => {
